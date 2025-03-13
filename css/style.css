@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-    font-family: TAN Astoria, 
-    margin: 0;
+    font-family: "TAN Astoria", sans-serif;
+     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -46,7 +46,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 100px; /* Space between the links */
+    margin: 0 20px; /* Space between the links */
 }
 
 
@@ -106,6 +106,7 @@ nav a:hover {
     z-index: 3; /* Ensures the text stays on top of both overlay and video */
 }
 .donate-btn {
+     display: flex;
     background-color:   #3a320c; /* Green background for button */
     color: white;
     font-size: 18px;
