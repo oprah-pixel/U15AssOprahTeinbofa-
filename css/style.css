@@ -107,6 +107,7 @@ nav a:hover {
     font-size: 30px;
     font-weight: bold;
     z-index: 3; /* Ensures the text stays on top of both overlay and video */
+     margin-bottom: 80px; /* Space from the button to the text */
 }
 .hero-text img {
     max-width: 150px; /* Adjust the size of the logo */
