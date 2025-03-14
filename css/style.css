@@ -112,22 +112,24 @@ nav a:hover {
     margin-bottom: 10px;
 }
 .donate-btn {
-     margin-top: 20px;
-     display: flex;
-    background-color:   #3a320c; /* Green background for button */
+    display: inline-block; /* Makes the button behave like a block element */
+    background-color: #3a320c; /* Button background color */
     color: white;
-    font-size: 18px;
-    padding: 10px 20px; /* Padding to make the button larger */
+    font-size: 24px; /* Increase font size for the button */
+    padding: 20px 40px; /* Add more padding to make the button larger */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners for the button */
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  justify-content: center;
-   align-items: center;
+    text-align: center; /* Ensures text is centered inside the button */
+    z-index: 3; /* Keeps the button on top of the background and other elements */
+    position: absolute; /* Position it relative to the section */
+    bottom: 30px; /* Adjust position from the bottom */
+    left: 50%; /* Horizontally centers the button */
+    transform: translateX(-50%); /* Corrects the centering by shifting it back 50% of its width */
 }
 
-/* Button Hover Effect */
 .donate-btn:hover {
-    background-color: #45a049; /* Slightly darker green when hovered */
- }
+    background-color: #25632d; /* Slightly darker green when hovered */
+}
