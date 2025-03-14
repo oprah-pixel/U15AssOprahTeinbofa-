@@ -99,9 +99,11 @@ nav a:hover {
 }
 
 /* Text inside the hero section */
-.hero h2 {
+.hero-text {
+    position: absolute;
     color: Black;
-    font-size: 40px;
+    text-align: center;
+    font-size: 30px;
     font-weight: bold;
     z-index: 3; /* Ensures the text stays on top of both overlay and video */
 }
