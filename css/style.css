@@ -72,6 +72,7 @@ nav a:hover {
     height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     overflow: hidden; /* Ensure video doesn't spill over */
 }
@@ -123,12 +124,13 @@ nav a:hover {
     font-weight: bold;
     transition: background-color 0.3s ease;
     text-align: center; /* Ensures text is centered inside the button */
-    position: absolute; /* Position it relative to the section */
-    bottom: 60px; /* Adjusted position to give more space from the bottom */
-    left: 50%; /* Horizontally centers the button */
-    transform: translateX(-50%); /* Corrects the centering by shifting it back 50% of its width */
-    z-index: 3; /* Keeps the button on top of the background and other elements */
+    position: absolute;
+    bottom: 20px; /* Space from the bottom of the section */
+    left: 50%;
+    transform: translateX(-50%); /* Corrects centering by shifting the button back */
+    z-index: 3; /* Keeps the button on top of the video */
 }
+
 
 .donate-btn:hover {
     background-color: #25632d; /* Slightly darker green when hovered */
