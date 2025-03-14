@@ -114,22 +114,17 @@ nav a:hover {
     margin-bottom: 10px;
 }
 .donate-btn {
-    display: inline-block; /* Makes the button behave like a block element */
     background-color: #3a320c; /* Button background color */
     color: white;
-    font-size: 24px; /* Increase font size for the button */
-    padding: 20px 40px; /* Add more padding to make the button larger */
+    font-size: 24px; /* Increase font size */
+    padding: 20px 40px; /* Make the button larger */
     border: none;
-    border-radius: 10px; /* Rounded corners for the button */
+    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    text-align: center; /* Ensures text is centered inside the button */
-    position: absolute;
-    bottom: 20px; /* Space from the bottom of the section */
-    left: 50%;
-    transform: translateX(-50%); /* Corrects centering by shifting the button back */
-    z-index: 3; /* Keeps the button on top of the video */
+    display: inline-block;
+    text-align: center;
 }
 
 
