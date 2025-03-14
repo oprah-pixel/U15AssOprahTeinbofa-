@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: "TAN Astoria", sans-serif;
+    font-family: TAN Astoria;
      margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -101,7 +101,7 @@ nav a:hover {
 /* Text inside the hero section */
 .hero-text {
     position: absolute;
-    color: Black;
+    color: White;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
