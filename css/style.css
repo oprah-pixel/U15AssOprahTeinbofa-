@@ -123,11 +123,11 @@ nav a:hover {
     font-weight: bold;
     transition: background-color 0.3s ease;
     text-align: center; /* Ensures text is centered inside the button */
-    z-index: 3; /* Keeps the button on top of the background and other elements */
     position: absolute; /* Position it relative to the section */
-    bottom: 30px; /* Adjust position from the bottom */
+    bottom: 60px; /* Adjusted position to give more space from the bottom */
     left: 50%; /* Horizontally centers the button */
     transform: translateX(-50%); /* Corrects the centering by shifting it back 50% of its width */
+    z-index: 3; /* Keeps the button on top of the background and other elements */
 }
 
 .donate-btn:hover {
