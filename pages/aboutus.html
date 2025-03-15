@@ -3,179 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>                                                                                              
-    <style>/* General Styles */
-body {
-    font-family: TAN Astoria;
-     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+    <title>About Us</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'TAN Astoria', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-/* Navigation Bar */
-header {
-    background-color: #fefff3; /* Olive green background */
-    padding: 10px 0;
-}
+        /* Header */
+        header {
+            background-color: #fefff3;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-/* Logo and Header Title */
-header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between logo and nav */
-    padding-left: 20px;
-    padding-right: 20px;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
 
-header .logo img {
-    max-width: 50px; /* Adjust the size of the logo */
-    margin-right: 10px;
-}
+        .logo img {
+            max-width: 50px;
+        }
 
-header h1 {
-    color: Black;
-    font-weight: bold;
-    font-size: 25px;
-}
+        header h1 {
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+        }
 
-/* Navigation Menu */
-nav {
-    text-align: center; /* Ensures the nav links are centered */
-}
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Center the nav links */
-    margin: 0;
-    padding: 0;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #3a320c;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+            display: inline-block;
+        }
 
-nav ul li {
-    margin: 0 20px; /* Space between the links */
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
+        /* Page title */
+        h1 {
+            text-align: center;
+            color: #3a320c;
+        }
 
-nav a {
-    color: white; /* Make the link text white */
-    text-decoration: none;
-    font-weight: bold; /* Make the text bold */
-    font-size: 18px;
-    padding: 10px 20px; /* Add padding to make it look like a button */
-    background-color: #3a320c; /* Button background color */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
+        /* Members Grid */
+        .members-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
 
-nav a:hover {
-    text-decoration: underline; /* Add underline effect on hover */
-}
-    
+        .member-card {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-/* Members Section (Masonry Layout) */
-.members-container {
-    column-count: 3; /* Masonry layout */
-    column-gap: 20px;
-     z-index: 3;
-}
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
 
-.member-card {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-    background: ##3a320c;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-     z-index: 3;
-}
+        .member-card img {
+            width: 100%;
+            display: block;
+            border-radius: 15px;
+        }
 
-.member-card img {
-    width: 100%;
-    display: block;
-    border-bottom: 3px solid #3a320c; /* Espresso border */
-     z-index: 3;
-}
+        .member-title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #3a320c;
+        }
 
-.member-card .description {
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-    color: #3a320c; /* Espresso text */
-     z-index: 3;
-}</style> <!-- Link to internal CSS -->
+        /* Expandable Text */
+        .member-text {
+            display: none;
+            padding: 15px;
+            font-size: 14px;
+            color: #3a320c;
+            text-align: left;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #3a320c;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .members-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section with Navigation Bar -->
-    <header>
-        <div class="logo">
-            <!-- Correct image URL -->
-            <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/logo.webp" alt="Organisation Logo">
-            <h1>SLOVAK COMMUNITY CHARITY</h1>
-        </div>
-        <!-- Navigation Menu -->
-        <nav>
-            
-                <a href="index.html">Home</a>
-                <a href="pages/aboutus.html">About Us</a>
-                <a href="pages/members.html">Membership/Fees</a>
-                <a href="pages/courses.html">Courses</a>
-                <a href="pages/educationgames.html">Educational Games</a>
-                <a href="pages/events.html">Events</a></li>
-                <a href="pages/contactus.html">Contact Us</a>
-                <a href="pages/donate.html">Donate Now</a>
-        </nav>
-    </header>
-    <!-- Page Content -->
-    <h1 style="text-align: center; color: #3a320c;">About us</h1>
-    <div class="members-container">
-        <div class="member-card">
-            <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/aboutuspic.jpg" alt="about us">
-       <div class="description"><h3>About Us</h3>
-            <h4>Who We Are</h4>
-            <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.
-                While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p></div>
-        </div>
-        <div class="member-card">
-            <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/solvak2.jpg" alt="Journey">
-            <div class="description"><h3>Our Mission</h3>
-            <p>Our mission is to: At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
-We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.
-Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. We are here to support families, guide them, and make sure no one feels lost when navigating life between two countries.
-Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</p></div>
-        <div class="member-card">
-            <img src= alt="ttps://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/martin-katler-7KJdg5Hi6XM-unsplash (1).jpg" alt="Our Team">
-            <div class="description"><h3>Our Journey</h3>
-            <p>Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.
-With a passion for teaching, culture, and community-building, we worked tirelessly to create a space where Slovak families could access quality education and cultural activities.
-After months of hard work, we were proud to become a registered charity on 9th September 2024, marking a significant step in our journey. Our official launch on 15th September was a proud moment, celebrated in collaboration with the Faculty of Education from Univerzita Mateja Bela and the Association of Slovak Schools and Community Centres in the UK.
-Since then, we have continued to grow, supporting Slovak-speaking families, students, and individuals who wish to learn, connect, and celebrate Slovak culture together.</p></div>
-        </div>
-        <div class="member-card">
-            <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/martin-katler-7KJdg5Hi6XM-unsplash (1).jpg alt="Culture">
-            <div class="description"><h3>Our Team</h3>
-            <p>At Slovenské Vzdelávacie Centrum – South Manchester, we are proud to be led by a team of experienced educators and charity trustees who are passionate about Slovak language, culture, and education. With backgrounds in both the Slovak and UK education systems, we are dedicated to providing high-quality learning experiences and fostering a strong Slovak community abroad.
-Each of us shares the same vision—to create a space where Slovak heritage is preserved, language is celebrated, and families feel supported in their bilingual journey.</p>
-            <h2>Mgr. Mária Mušutová</h2>
-                <p>Co-Founder | Chair of the Charity | Trustee | Curriculum & Slovak Language Teaching Developer for All Ages | Lead Teacher for AM Sessions
-Originally from Orava region in Slovakia, Mária has lived in Manchester for 17 years and holds a PGCE degree in Modern Foreign Languages from Manchester Metropolitan University. She currently works as a Spanish and French teacher at a secondary school while also offering private Slovak lessons and translation services.
-As a Slovak mother abroad, Mária is deeply committed to ensuring her daughter grows up speaking Slovak and understanding her cultural heritage. This passion led her to co-found the centre and establish it as a registered charity, bringing together families who share the same goal.
-Mária is responsible for developing the Slovak language curriculum for all ages, ensuring that students of various backgrounds and abilities receive structured and engaging lessons. She also leads and teaches the morning (AM) session, where she works with a diverse group of learners, ranging from young children (4 years old) to English-speaking adults learning Slovak as a second language.
-At SVC-SM, Mária focuses on:
-<ul>
-<li>Chairing the charity and overseeing its development</li>
-<li>Developing the curriculum for Slovak as a second language across all age groups</li>
-<li>Leading and teaching the AM session for mixed-ability students (ages 4+ to adults)</li>
-<li>Managing administrative tasks and charity operations</li>
-<li>Organising cultural events, trips, and workshops</li>
-</ul>
-"Slovenské Vzdelávacie Centrum - South Manchester allows us to unite the Slovak community, share educational and cultural opportunities, and build lifelong friendships with those who cherish our traditions."</p>
-            </div>
-        </div>
-        <div class="member-card">
-            <img src="https://source.unsplash.com/300x400/?volunteer" alt="Volunteer">
-            <div class="description">Our volunteers making an impact.</div>
+
+<header>
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/logo.webp" alt="Organisation Logo">
+        <h1>SLOVAK COMMUNITY CHARITY</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/aboutus.html">About Us</a>
+        <a href="pages/members.html">Membership/Fees</a>
+        <a href="pages/courses.html">Courses</a>
+        <a href="pages/educationgames.html">Educational Games</a>
+        <a href="pages/events.html">Events</a>
+        <a href="pages/contactus.html">Contact Us</a>
+        <a href="pages/donate.html">Donate Now</a>
+    </nav>
+</header>
+
+<h1>About Us</h1>
+
+<div class="members-container">
+    <div class="member-card">
+        <div class="member-title">Who We Are</div>
+        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/aboutuspic.jpg" alt="Who We Are">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide education and organise cultural activities.
         </div>
     </div>
+
+    <div class="member-card">
+        <div class="member-title">Our Mission</div>
+        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/solvak2.jpg" alt="Our Mission">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            Our mission is to keep Slovak heritage alive, support families, and provide quality education for Slovak-speaking children in the UK.
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-title">Our Journey</div>
+        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/martin-katler-7KJdg5Hi6XM-unsplash.jpg" alt="Our Journey">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            Founded by passionate educators, our charity officially launched in 2024, creating a space for Slovak families to connect, learn, and celebrate their culture.
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-title">Our Team</div>
+        <img src="https://source.unsplash.com/300x400/?team" alt="Our Team">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            Our dedicated team consists of experienced educators and charity trustees who work tirelessly to support our Slovak community abroad.
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-title">Volunteers</div>
+        <img src="https://source.unsplash.com/300x400/?volunteer" alt="Volunteers">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            Our volunteers play a vital role in making a positive impact, supporting cultural events, and engaging in community activities.
+        </div>
+    </div>
+
+    <div class="member-card">
+        <div class="member-title">How You Can Help</div>
+        <img src="https://source.unsplash.com/300x400/?helping-hands" alt="How You Can Help">
+        <button class="toggle-btn">+</button>
+        <div class="member-text">
+            You can support our mission by donating, volunteering, or participating in our cultural and educational events. Together, we can keep the Slovak spirit alive!
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const text = this.nextElementSibling;
+            text.style.display = text.style.display === 'block' ? 'none' : 'block';
+            this.textContent = this.textContent === '+' ? '-' : '+';
+        });
+    });
+</script>
+
 </body>
 </html>
+
