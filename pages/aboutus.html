@@ -3,56 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Slovak Community Charity</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Our Members</title>  
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tan+Astoria&display=swap');
+
+        /* Nav Bar Styling */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Highlight color on hover */
+        }
+
+        body {
+            font-family: 'Tan Astoria', serif;
+            background-color: #f5f0e1; /* Beige background */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .members-container {
+            column-count: 3; /* Masonry layout */
+            column-gap: 20px;
+        }
+
+        .member-card {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .member-card img {
+            width: 100%;
+            display: block;
+            border-bottom: 3px solid #3a320c; /* Espresso border */
+        }
+
+        .member-card .description {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            color: #3a320c; /* Espresso text */
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/refs/heads/main/DALL%C2%B7E%202025-03-13%2020.11.27%20-%20A%20vintage%20minimalist%20logo%20for%20a%20Slovak%20community%20charity.%20The%20logo%20features%20the%20colors%20of%20the%20Slovak%20flag%E2%80%94red%2C%20blue%2C%20and%20white.%20It%20includes%20a%20circular.webp" alt="Organisation Logo">
-            <h1>Slovak Community Charity</h1>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="membership.html">Membership</a>
-            <a href="courses.html">Courses</a>
-            <a href="educationgames.html">Educational Games</a>
-            <a href="events.html">Events</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="donate.html">Donate Now</a>
-        </nav>
-    </header>
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- About Us Section -->
-    <section class="about-us">
-        <div class="about-text">
-            <h2>Our Mission</h2>
-            <p>We are dedicated to supporting the Slovak community through charity work, education, and outreach programs. Our mission is to create opportunities for Slovak individuals and families to thrive and contribute positively to society.</p>
+    <!-- Page Content -->
+    <h1 style="text-align: center; color: #3a320c;">Meet Our Members</h1>
+    <div class="members-container">
+        <div class="member-card">
+            <img src="https://source.unsplash.com/300x400/?community" alt="Charity">
+            <div class="description">This picture represents our charity mission.</div>
         </div>
-
-        <div class="team">
-            <h2>Meet Our Team</h2>
-            <p>Our team consists of passionate individuals committed to making a difference in the lives of Slovak people. We work together to achieve our goals and provide meaningful impact.</p>
-            <!-- Add team member profiles -->
-            <div class="team-member">
-                <img src="team-member.jpg" alt="Team Member">
-                <h3>John Doe</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="team-member.jpg" alt="Team Member">
-                <h3>Jane Smith</h3>
-                <p>Community Outreach Coordinator</p>
-            </div>
-            <!-- More team members can be added here -->
+        <div class="member-card">
+            <img src="https://source.unsplash.com/300x400/?journey" alt="Journey">
+            <div class="description">This image highlights our journey.</div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Slovak Community Charity. All rights reserved.</p>
-    </footer>
+        <div class="member-card">
+            <img src="https://source.unsplash.com/300x400/?team" alt="Team">
+            <div class="description">Our dedicated team members.</div>
+        </div>
+        <div class="member-card">
+            <img src="https://source.unsplash.com/300x400/?culture" alt="Culture">
+            <div class="description">Celebrating Slovak heritage.</div>
+        </div>
+        <div class="member-card">
+            <img src="https://source.unsplash.com/300x400/?volunteer" alt="Volunteer">
+            <div class="description">Our volunteers making an impact.</div>
+        </div>
+    </div>
 </body>
 </html>
 
