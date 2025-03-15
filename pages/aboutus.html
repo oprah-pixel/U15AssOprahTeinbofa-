@@ -71,63 +71,65 @@ nav a:hover {
     text-decoration: underline; /* Add underline effect on hover */
 }
        
-/* Background Section */
-.background {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Keeps the background fixed during scroll */
-}
+ /* Background Image */
+        .background {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            background-image: url('https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-/* Overlay (adjust opacity and z-index) */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity to 0.3 for less opacity */
-    z-index: 2; /* Make sure the overlay is beneath the content */
-}
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-/* Content should be above the overlay */
-.members-container {
-    position: relative; /* Ensure content is above the overlay */
-    z-index: 3; /* Ensure this content is above the overlay */
-}
+        /* Members Section */
+        .about-us-container {
+            column-count: 3;
+            column-gap: 20px;
+        }
 
-/* Member Cards */
-.member-card {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-    background: #3a320c;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    z-index: 3; /* Ensure member cards are above the overlay */
-}
+        .member-card {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            background: #3a320c;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-.member-card img {
-    width: 100%;
-    display: block;
-    border-bottom: 3px solid #3a320c; /* Espresso border */
-     z-index: 3;
-}
+        .member-card img {
+            width: 100%;
+            display: block;
+            border-bottom: 3px solid #3a320c;
+        }
 
-.member-card .description {
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-    color: #3a320c; /* Espresso text */
-     z-index: 3;
+        .description {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            color: #3a320c;
+        }
+        /* Centering text inside the background */
+        .background h1 {
+            color: white;
+            font-size: 40px;
+            z-index: 3;
+            text-align: center;
+        }
 }</style> <!-- Link to internal CSS -->
 </head>
 <body>
@@ -151,25 +153,38 @@ nav a:hover {
                 <a href="pages/donate.html">Donate Now</a>
         </nav>
     </header>
-    <div class="background">
-        <div class="overlay"></div></div>
-    <!-- Page Content -->
-    <h1 style="text-align: center; color: #3a320c;">About us</h1>
-    <div class="members-container">
+    <div class="about-us-container">
+
+        <!-- Background Image and Overlay -->
+        <div class="background">
+            <div class="overlay"></div> <!-- Overlay to darken background image -->
+            <h1>About Us</h1> <!-- Heading on top of background -->
+        </div>
+
+        <!-- Main Content Section -->
         <div class="member-card">
             <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/aboutuspic.jpg" alt="about us">
-       <div class="description"><h3>About Us</h3>
-            <h4>Who We Are</h4>
-            <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.
-                While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p></div>
+            <div class="description">
+                <h3>About Us</h3>
+                <h4>Who We Are</h4>
+                <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.
+                    While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p>
+            </div>
         </div>
+
+        <!-- More Member Cards -->
         <div class="member-card">
             <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/solvak2.jpg" alt="Journey">
-            <div class="description"><h3>Our Mission</h3>
-            <p>Our mission is to: At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
-We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.
+            <div class="description">
+                <h3>Our Mission</h3>
+                <p>Our mission is to: At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
+                We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.
 Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. We are here to support families, guide them, and make sure no one feels lost when navigating life between two countries.
-Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</p></div>
+Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</p>
+            </div>
+        </div>
+
+        <!-- You can add more content, e.g., team, volunteers, culture, etc. -->
         <div class="member-card">
             <img src="https://source.unsplash.com/300x400/?team" alt="Team">
             <div class="description">Our dedicated team members.</div>
@@ -182,6 +197,6 @@ Above all, we are here to create a community—one that welcomes, supports, and 
             <img src="https://source.unsplash.com/300x400/?volunteer" alt="Volunteer">
             <div class="description">Our volunteers making an impact.</div>
         </div>
-    </div>
+
 </body>
 </html>
