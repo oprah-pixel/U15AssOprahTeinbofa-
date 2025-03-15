@@ -7,235 +7,154 @@
     <style>
         body {
             margin: 0;
-            font-family: Tan astoria;
-            background-color: #fdfaf0;
+            font-family: Tan Astoria
+            background-color: #fdfaf0; /* Beige background */
         }
+
         header {
-    background-color: #fefff3; /* Olive green background */
-    padding: 10px 0;
-}
+            background-color: #fefff3; /* Olive green background */
+            padding: 10px 0;
+        }
 
-/* Logo and Header Title */
-header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between logo and nav */
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-header .logo img {
-    max-width: 50px; /* Adjust the size of the logo */
-    margin-right: 10px;
-}
-
-header h1 {
-    color: Black;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-/* Navigation Menu */
-nav {
-    text-align: center; /* Ensures the nav links are centered */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Center the nav links */
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px; /* Space between the links */
-}
-
-
-nav a {
-    color: white; /* Make the link text white */
-    text-decoration: none;
-    font-weight: bold; /* Make the text bold */
-    font-size: 18px;
-    padding: 10px 20px; /* Add padding to make it look like a button */
-    background-color: #3a320c; /* Button background color */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-nav a:hover {
-    text-decoration: underline; /* Add underline effect on hover */
-}
-
-        .container {
-            width: 100%;
-            height: 100vh;
+        /* Logo and Header Title */
+        header .logo {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
         }
-        .header-section {
-            width: 100%;
-            height: vh;
-            background: linear-gradient(to bottom, #f3fadc 50%, #fefff3 50%);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding-left: 100px;
+
+        header .logo img {
+            max-width: 50px;
+            margin-right: 10px;
         }
-        .header-section h1{
-            font-size: 50px;
-            margin: 0;
-        }
-        .header-section p {
-            max-width: 500px;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .grid-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px 0;
-        }
-        .grid-item {
-            position: relative;
-            width: 250px;
-            background: fdfaf0;
-            border: 2px solid white;
-            border-radius: 15px;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            height: auto; /* Allow height to adjust when text expands */
-        }
-        .grid-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .title-box {
-            background: #f3fadc;
-            color: Black;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 10px;
-            position: absolute;
-            bottom: 50px;
-            left: 10px;
-            right: 10px;
-            z-index: 2; /* Lower z-index to let expanded text appear above it */
-          border: 2px solid black;
-        }
-        
-        }
-        .plus-button {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: white;
+
+        header h1 {
             color: black;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        /* Navigation Menu */
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 20px;
-            cursor: pointer;
-          font-weight: bold; /* This makes the plus button bold */
+            margin: 0;
+            padding: 0;
         }
-        .expand-text {
-            display: none;
-            font-size: 14px;
-            margin-left: 10px;
-             animation: fadeIn 0.5s ease-in-out;
-            z-index: 1; /* Ensure the expanded text is above the title box */
-           position: relative; /* This ensures the expanded text doesn’t overlap the title box */
+
+        nav ul li {
+            margin: 0 20px;
         }
-        @keyframes popUp {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-         
-          @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-            @keyframes popUp {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #3a320c;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Heading Box */
+        .section .heading {
+            font-size: 18px;
+            color: #3a320c; /* Dark brown */
+            padding: 10px;
+            background-color: #f3fadc; /* Olive green */
+            border: 2px solid black; /* Black outline */
+            border-radius: 5px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Text Box */
+        .section .text {
+            font-size: 16px;
+            color: #4d4d4d; /* Grey text */
+            padding: 15px;
+            background-color: #fefff3; /* White */
+            border: 2px solid black; /* Black outline */
+            border-radius: 5px;
+            margin-top: 5px;
+        }
 
     </style>
-  <body>
+</head>
+<body>
+
     <!-- Navigation Bar -->
     <header>
         <div class="logo">
-            <!-- Correct image URL -->
             <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/logo.webp" alt="Organisation Logo">
-            <h1>SOLVAK COMMUNITY CHARITY</h1>
+            <h1>SLOVAK COMMUNITY CHARITY</h1>
         </div>
         <nav>
-            
-                <a href="index.html">Home</a>
-                <a href="pages/aboutus.html">About Us</a>
-                <a href="pages/members.html">Membership/fees</a>
-                <a href="pages/courses.html">Courses</a>
-  <a href="pages/educationgames.html">Educational games</a>
-                <a href="pages/events.html">Events</a></li>
-                <a href="pages/contactus.html">Contact us</a>
-      <a href="pages/donate.html">Donate Now</a>
-            
+            <a href="index.html">Home</a>
+            <a href="pages/aboutus.html">About Us</a>
+            <a href="pages/members.html">Membership/fees</a>
+            <a href="pages/courses.html">Courses</a>
+            <a href="pages/educationgames.html">Educational games</a>
+            <a href="pages/events.html">Events</a>
+            <a href="pages/contactus.html">Contact us</a>
+            <a href="pages/donate.html">Donate Now</a>
         </nav>
     </header>
-</head>
 
-    </div>
-    <div class="header-section">
-        <h3>ABOUT US</h3>
-      <h3>Who Are We</h3
-        <p> Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad.
-While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p>
-    </div>
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src=""https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/mainmartin-katler-7KJdg5Hi6XM-unsplash (1).jpg" alt="Profile">
-            <div class="title-box">Our Mission</div>
-            <div class="plus-button" onclick="toggleText(this)">+</div>
-            <div class="expand-text">Our mission is to: At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home.
-We believe that language is more than just words; it carries identity, history, and a sense of belonging. Through our work, we bring Slovak-speaking families together, helping them build friendships, strengthen their cultural ties, and feel at home even while living in the UK.
-Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. We are here to support families, guide them, and make sure no one feels lost when navigating life between two countries.
-Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</div>
-        </div>
-        <div class="grid-item">
-            <img src="person2.jpg" alt="Profile">
-            <div class="title-box">SAMIRA HADID</div>
-            <div class="role">Project Manager</div>
-            <div class="plus-button" onclick="toggleText(this)">+</div>
-            <div class="expand-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="grid-item">
-            <img src="person3.jpg" alt="Profile">
-            <div class="title-box">JONATHAN PATTERSON</div>
-            <div class="role">Marketing</div>
-            <div class="plus-button" onclick="toggleText(this)">+</div>
-            <div class="expand-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <!-- Sections -->
+    <div class="section">
+        <div class="heading">Who Are We</div>
+        <div class="text">
+            <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad. While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p>
         </div>
     </div>
-    <script>
-        function toggleText(button) {
-    var text = button.nextElementSibling;
-    if (text.style.display === "none" || text.style.display === "") {
-        text.style.display = "block"; // Show the text
-        button.innerHTML = "-"; // Change the plus to a minus
-    } else {
-        text.style.display = "none"; // Hide the text
-        button.innerHTML = "+"; // Change the minus back to a plus
-    }
-}
-    </script>
+
+    <div class="section">
+        <div class="heading">Our Mission</div>
+        <div class="text">
+            <p>Our mission is to: At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home. Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="heading">Our Values</div>
+        <div class="text">
+            <p>We believe in the power of language to bring people together and create a sense of belonging. Our values are based on respect for Slovak culture and the people who carry it with them. We are committed to fostering an environment where everyone can learn, grow, and celebrate their heritage with pride. Together, we build connections, friendships, and a sense of family.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="heading">Community Engagement</div>
+        <div class="text">
+            <p>We offer various activities that engage individuals of all ages, including language lessons, cultural workshops, social events, and community gatherings. Through these activities, we aim to strengthen ties within the Slovak community while also inviting others to learn about and appreciate our culture.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="heading">Our Impact</div>
+        <div class="text">
+            <p>Over the years, we’ve made a positive impact on many families by providing educational resources, cultural events, and a supportive community. We continue to grow and expand our reach, ensuring that the Slovak language and culture remain strong, vibrant, and accessible to future generations.</p>
+        </div>
+    </div>
+
 </body>
 </html>
-
