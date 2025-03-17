@@ -68,6 +68,30 @@
             text-decoration: underline;
         }
 
+        .image-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Set height to half the screen */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section */
+    display: block;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust transparency here */
+}
+
         /* Sections */
         .section {
             width: 100%;
@@ -120,7 +144,11 @@
         </nav>
     </header>
 
-    <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/slovak community manchester (1).avif" alt="about us">
+   <!-- Image Section with Overlay -->
+<div class="image-container">
+    <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/slovak community manchester(1).avif" alt="About Us">
+</div>
+
 
     <!-- Sections -->
     <div class="section">
