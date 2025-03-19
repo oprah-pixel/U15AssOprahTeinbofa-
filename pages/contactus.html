@@ -1,2 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Tan astoria;
+            background-color:  #f3fadc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-family: 'Tan Astoria';
+            color: #4e4a42; /* Espresso color */
+        }
+        .contact-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fefff3;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-info h2 {
+            font-family: 'Tan Astoria', ;
+            color: #4e4a42;
+        }
+        .contact-info p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input[type="submit"] {
+            background-color: #ff7f50; /* Warm orange */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #f56a36; /* Darker warm orange */
+        }
+        .location-map {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .location-map iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            border: 0;
+        }
+        .contact-details {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-details h3 {
+            color: #4e4a42;
+            font-family: 'Tan Astoria';
+        }
+        .contact-details p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        .social-media {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #4e4a42;
+        }
+        .cta {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .cta h2 {
+            font-family: 'Tan Astoria';
+            color: #4e4a42;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<div class="cta">
+    <h2>Get in Touch</h2>
+</div>
+
+<div class="contact-container">
+    <div class="contact-info">
+        <h2>We'd Love to Hear From You!</h2>
+        <p>Feel free to get in touch with us. Fill out the form below or reach out to us through our contact details.</p>
+    </div>
+
+    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <input type="submit" value="Send Message">
+</form>
+
+
+<div class="location-map">
+    <h3>Our Location</h3>
+    <!-- Embed Google Map (replace the link below with your actual location) -->
+    <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<div class="contact-details">
+    <h3>Contact Information</h3>
+    <p>Phone: [Your Phone Number]</p>
+    <p>Email: [svcmanchester@yahoo.com]</p>
+</div>
+
+<div class="social-media">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <!-- Add more social links as necessary -->
+</div>
+
+</body>
+</html>
 
 
