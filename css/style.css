@@ -79,7 +79,7 @@ nav a:hover {
 }
 
 /* Video Background */
-.hero iframe {
+.hero video {
     position: absolute;
     top: 0;
     left: 0;
