@@ -69,59 +69,63 @@
         }
          
 
-        .image-container {
-    position: relative;
-    width: 100%;
-    height: 50vh; /* Set height to half the screen */
-    overflow: hidden;
+        
+      .content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 10%;
 }
 
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the section */
-    display: block;
+.text {
+    width: 50%;
+  font-size: 16px;
 }
 
-.image-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Adjust transparency here */
+.image {
+    width: 50%;
 }
 
-        /* Sections */
-        .section {
-            width: 100%;
-            margin-bottom: 20px;
-            box-sizing: border-box;
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+ .reverse {
+            flex-direction: row;
+/* Force alternating layout */
+.content-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+    /* Footer Styling */
+        footer {
+            background-color: #3a320c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
         }
 
-        /* Heading Box */
-        .section .heading {
-            font-size: 25px;
-            color: purple; /* Dark brown */
-            padding: 10px;
-            background-color: #f3fadc; /* Olive green */
-            border: 2px solid black; /* Black outline */
-            border-radius: 5px;
-            text-align: left;
-            font-weight: bold;
+        footer a {
+            color: #fdfaf0;
+            text-decoration: underline;
         }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .content-row,
+    .content-row:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
 
-        /* Text Box */
-        .section .text {
-            font-size: 16px;
-            color: black; /* Grey text */
-            padding: 15px;
-            background-color: #fefff3; /* White */
-            border: 2px solid black; /* Black outline */
-            border-radius: 5px;
-            margin-top: 5px;
-        }
+    .text, .image {
+        width: 100%;
+      
+    }
+}
+
 
     </style>
 </head>
@@ -146,42 +150,32 @@
     </header>
     
 
-   <!-- Image Section with Overlay -->
-<div class="image-container">
-        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/main/slovak%20community%20manchester%20(1).avif" alt="About Us">
-    </div>
-        
-
-
-    <!-- Sections -->
-    <div class="section">
-        <div class="heading">Who Are We</div>
-        <div class="text">
-            <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad. While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community.</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="heading">Our Mission</div>
-        <div class="text">
-            <p>At Slovenské Vzdelávacie Centrum – South Manchester, our mission goes beyond just teaching the Slovak language. We are here to keep our heritage alive, to ensure that children growing up abroad don’t lose their connection to their roots, and to create a place where Slovak culture thrives—even far from home. Education is at the heart of what we do, but our purpose extends even further. We are here to bridge the gap between the UK and Slovak education systems, ensuring that children who may one day return to Slovakia can transition smoothly. Above all, we are here to create a community—one that welcomes, supports, and celebrates Slovak language, traditions, and the people who cherish them.</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="heading">Our Journey</div>
-        <div class="text">
-            <p>Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.
+  <section class="content-row">
+    <div class="text">
+        <h1>Who are we</h1>
+        <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity dedicated to preserving and promoting Slovak language and culture. We provide Slovak language education and organize cultural and community activities to help Slovak-speaking families maintain their heritage while living abroad. While our primary focus is on supporting Slovak-speaking children and families, we warmly welcome anyone interested in learning the Slovak language and engaging with our traditions. Beyond our Saturday school, we offer various workshops, events, and social activities where individuals of all ages can connect, learn, and take part in our cultural community</p>
+      
+      <h1> Our Journey</h1>
+<p>Slovenské Vzdelávacie Centrum – South Manchester was founded by a group of dedicated teachers who shared a common vision—to establish a Slovak educational and cultural centre that truly makes a difference.
 With a passion for teaching, culture, and community-building, we worked tirelessly to create a space where Slovak families could access quality education and cultural activities.
 After months of hard work, we were proud to become a registered charity on 9th September 2024, marking a significant step in our journey. Our official launch on 15th September was a proud moment, celebrated in collaboration with the Faculty of Education from Univerzita Mateja Bela and the Association of Slovak Schools and Community Centres in the UK.
-Since then, we have continued to grow, supporting Slovak-speaking families, students, and individuals who wish to learn, connect, and celebrate Slovak culture together.</p>
-        </div>
+Since then, we have continued to grow, supporting Slovak-speaking families, students, and individuals who wish to learn, connect, and celebrate Slovak culture together</p>
     </div>
+    <div class="image">
+        <img src="https://github.com/oprah-pixel/U15AssOprahTeinbofa-/blob/main/martin-katler-7KJdg5Hi6XM-unsplash%20(1).jpg?raw=true" alt="Our Vision">
+      
+    </div>
+</section>
 
-    <div class="section">
-        <div class="heading">Our Team</div>
-        <div class="text">
-           <p>At Slovenské Vzdelávacie Centrum – South Manchester, we are proud to be led by a team of experienced educators and charity trustees who are passionate about Slovak language, culture, and education. With backgrounds in both the Slovak and UK education systems, we are dedicated to providing high-quality learning experiences and fostering a strong Slovak community abroad.
+<section class="content-row reverse">
+    <div class="image">
+        <img src="https://github.com/oprah-pixel/U15AssOprahTeinbofa-/blob/main/charity-group.jpg?raw=true" alt="Our History">
+       <img src="https://github.com/oprah-pixel/U15AssOprahTeinbofa-/blob/main/volunteers-scaled.jpg?raw=true" alt="Our History">
+      
+    </div>
+    <div class="text">
+        <h1>Our Team</h1>
+        <p>At Slovenské Vzdelávacie Centrum – South Manchester, we are proud to be led by a team of experienced educators and charity trustees who are passionate about Slovak language, culture, and education. With backgrounds in both the Slovak and UK education systems, we are dedicated to providing high-quality learning experiences and fostering a strong Slovak community abroad.
 Each of us shares the same vision—to create a space where Slovak heritage is preserved, language is celebrated, and families feel supported in their bilingual journey.</p>
            <h3>Mgr. Mária Mušutová</h3> 
             <p>Co-Founder | Chair of the Charity | Trustee | Curriculum & Slovak Language Teaching Developer for All Ages | Lead Teacher for AM Sessions</p>
@@ -191,13 +185,13 @@ Each of us shares the same vision—to create a space where Slovak heritage is p
             <p>Co-Founder | Trustee | Early Years Educator | SEN Specialist | Creative & Cultural Programs</p>
             <h3>Zuzana Hanuliaková</h3>
             <p>Volunteer | Teaching Assistant | Social Media Coordinator</p>
-        </div>
     </div>
+</section>
 
-    <div class="section">
-        <div class="heading">Our Partners</div>
-        <div class="text">
-            <p>At Slovenské Vzdelávacie Centrum – South Manchester, we believe in the power of collaboration. Thanks to the support of our partners, we can continue to provide high-quality Slovak language education, cultural events, and community programs for Slovak-speaking families in the UK.
+<section class="content-row">
+    <div class="text">
+        <h2>Our Partners</h2>
+        <p><p>At Slovenské Vzdelávacie Centrum – South Manchester, we believe in the power of collaboration. Thanks to the support of our partners, we can continue to provide high-quality Slovak language education, cultural events, and community programs for Slovak-speaking families in the UK.
 We are proud to be supported by:</p>
                 <ul>
 <li><h3>Úrad pre Slovákov žijúcich v zahraničí</h3>  Supporting Slovak communities abroad in preserving language, culture, and national identity.</li>
@@ -207,16 +201,19 @@ We are proud to be supported by:</p>
                     <li><h3>Morrisons</h3>Providing local support and community refreshments sponsorship</li>
                     <li><h3>Manchester College</h3>Partnering with us on educational projects, including website development and student engagement.</li>
                     <li><h3>Porta134 Café</h3> A valued community partner that provides a welcoming space for our trustee meetings, supports us with tea and coffee at our events, and allows us to display children's artwork.</li>
-                    <p><h3>We are always looking to expand our network and build new partnerships that align with our mission. If you or your organization are interested in supporting our work, please get in touch.</h3></p>
-<h2>
-    <a href="contactus.html" style="color: green; text-decoration: underline; font-weight: bold;">
-        Contact us to explore partnership opportunities.
-    </a>
-</h2>
-        </div>
+                    
+<h2></p>
     </div>
-    <footer>
-        <p>&copy; 2025 Simple Layout. All rights reserved</p>
+    <div class="image">
+        <img src="https://raw.githubusercontent.com/oprah-pixel/U15AssOprahTeinbofa-/refs/heads/main/business-colleagues-doing-handshake-corridor-work-place_662214-287910.avif" alt="Our Team">
+    </div>
+</section>
+  
+<p><h3>We are always looking to expand our network and build new partnerships that align with our mission. If you or your organization are interested in supporting our work, please get in touch.</h3></p>
+   
+        <footer>
+        <p>&copy; 2025 Slovak Community Charity. All rights reserved.</p>
+        <p><a href="contactus.html">Contact us</a> for partnership opportunities.</p>
     </footer>
 
 </body>
