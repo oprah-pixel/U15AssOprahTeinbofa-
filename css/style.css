@@ -70,7 +70,7 @@ nav a:hover {
 /* Hero Section with Video Background */
 .hero {
     position: relative;
-    height: 100vh; /* Full viewport height */
+   height: 56.25vw; /* This keeps a 16:9 aspect ratio */
     display: flex;
     justify-content: center;
     flex-direction: column;
