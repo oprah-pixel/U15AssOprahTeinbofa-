@@ -132,4 +132,17 @@ nav a:hover {
 .donate-btn:hover {
     background-color: #25632d; /* Slightly darker green when hovered */
 }
+  /* Footer Styling */
+        footer {
+            background-color: #add8e6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #fdfaf0;
+            text-decoration: underline;
+        }
 
